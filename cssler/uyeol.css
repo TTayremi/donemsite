@@ -102,7 +102,7 @@
 /*üye ol Başlangıç */
 .ana {
     width: 40%;
-    margin: 200px auto;
+    margin: 150px auto;
     display: flex;
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0.6);
@@ -151,6 +151,7 @@
     width: 70%;
     border: 1px solid black;
     border-radius: 8px;
+    transition: transform 0.4s;
 }
 
 #checkLabeli {
@@ -170,7 +171,13 @@
     background-color: black;
     color: white;
     margin-top: 30px;
+    transition: transform 0.4s;
 }
+
+.ana .kayit form>input:hover {
+    transform: scale(1.1);
+}
+
 
 
 
