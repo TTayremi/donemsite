@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Space Grotesk', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+#tumSayfa {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("../fotolar/arkaplan3.jpg");
+    background-size: cover;
+    /* ekranı doldurur */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*Üst Menü Başlangıç */
+.UstMenu {
+
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: 0px auto;
+
+    justify-content: space-evenly
+}
+
+#UstMenuFoto img {
+    width: 200px;
+
+}
+
+#UstMenuSag a {
+    color: black;
+}
+
+.UstMenuOrta ul {
+    display: flex;
+    list-style: none;
+}
+
+.UstMenuOrta ul>li {
+    position: relative;
+    padding: 10px 20px;
+    border: 1px solid black;
+    cursor: pointer;
+    background: white;
+    min-width: 160px;
+
+    text-align: center;
+}
+
+.UstMenuOrta ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    flex-direction: column;
+    background: white;
+    border: 1px solid black;
+    z-index: 999;
+}
+
+.UstMenuOrta ul li ul li {
+    border-bottom: 1px solid black;
+    padding: 10px 0;
+}
+
+.UstMenuOrta ul li ul li a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+
+.UstMenuOrta ul>li:hover {
+    background: black;
+    color: white;
+}
+
+.UstMenuOrta ul li ul li:hover {
+    background: black;
+}
+
+.UstMenuOrta ul li ul li:hover a {
+    color: white;
+}
+
+
+.UstMenuOrta ul>li:hover ul {
+    display: flex;
+}
+
+/*Üst Menü Bitiş */
+/*Ürünler Kısmı Başlangıç */
+.altmenu {
+    margin: 10px auto;
+
+    width: 70%;
+    display: flex;
+}
+
+.altmenu .yanfoto {
+
+
+    width: 20%;
+    margin-right: 5px;
+
+}
+
+.altmenu .yanfoto img {
+    width: 100%;
+    height: 100%;
+
+
+}
+
+.UrunContainer {
+
+    margin: 0px auto;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+}
+
+.UrunContainer .urun {
+    width: 25%;
+    border: 1px solid black;
+    transition: transform 0.4s;
+    background-color: white;
+
+
+}
+
+.UrunContainer a {
+    color: black;
+
+}
+
+.urun h4,
+p {
+    text-align: center;
+}
+
+.UrunContainer .urun .UrunImg {
+    width: 70%;
+    display: flex;
+    margin: 0px auto;
+
+
+}
+
+.UrunContainer .urun .UrunImg img {
+    width: 100%;
+
+}
+
+.UrunContainer .urun .UrunImgOzel {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.UrunContainer .urun .UrunImgOzel img {
+    width: 90%;
+
+}
+
+.UrunContainer .urun:hover {
+    transform: scale(1.02);
+    position: relative;
+
+}
+
+/*Ürünler Kısmı Bitiş */
+/*Footer Başlangıç*/
+.footer {
+    width: 100%;
+    color: white;
+
+    margin-top: 40px;
+    background-color: black;
+    display: flex;
+}
+
+.footer .yazilar {
+    width: 70%;
+    margin: 20px auto;
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.footer .yazilar a {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+/*Footer Bitişç*/
+@media(max-width:992px) {
+
+    .UstMenu {
+        justify-content: space-between;
+        width: 95%;
+    }
+
+    #UstMenuFoto img {
+        width: 150px;
+    }
+
+    .UstMenuOrta ul>li {
+        min-width: 140px;
+        padding: 10px 15px;
+    }
+
+    /* Ürün kartları */
+    .UrunContainer .urun {
+        width: 33.33%;
+    }
+
+    .footer .yazilar {
+        width: 90%;
+    }
+}
+
+
+
+@media(max-width:768px) {
+
+    /* ÜST MENÜ */
+    .UstMenu {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .UstMenuOrta ul {
+        flex-direction: column;
+
+    }
+
+
+    /* ALT MENÜ */
+    .altmenu {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .altmenu .yanfoto {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    /* ÜRÜN KARTLARI */
+    .UrunContainer {
+        justify-content: center;
+    }
+
+    .UrunContainer .urun {
+        width: 45%;
+        margin-bottom: 20px;
+    }
+
+    .UrunContainer .urun .UrunImg {
+        width: 90%;
+    }
+
+    /* FOOTER */
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .footer .yazilar {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .footer .yazilar a {
+        justify-content: center;
+        font-size: 14px;
+    }
+}

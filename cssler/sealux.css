@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Space Grotesk', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+#tumSayfa {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("../fotolar/arkaplan3.jpg");
+    background-size: cover;
+    /* ekranı doldurur */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*Üst Menü Başlangıç */
+.UstMenu {
+
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: 0px auto;
+
+    justify-content: space-evenly
+}
+
+#UstMenuFoto img {
+    width: 200px;
+
+}
+
+#UstMenuSag a {
+    color: black;
+}
+
+.UstMenuOrta ul {
+    display: flex;
+    list-style: none;
+}
+
+.UstMenuOrta ul>li {
+    position: relative;
+    padding: 10px 20px;
+    border: 1px solid black;
+    cursor: pointer;
+    background: white;
+    min-width: 160px;
+
+    text-align: center;
+}
+
+.UstMenuOrta ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    flex-direction: column;
+    background: white;
+    border: 1px solid black;
+    z-index: 999;
+}
+
+.UstMenuOrta ul li ul li {
+    border-bottom: 1px solid black;
+    padding: 10px 0;
+}
+
+.UstMenuOrta ul li ul li a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+
+.UstMenuOrta ul>li:hover {
+    background: black;
+    color: white;
+}
+
+.UstMenuOrta ul li ul li:hover {
+    background: black;
+}
+
+.UstMenuOrta ul li ul li:hover a {
+    color: white;
+}
+
+
+.UstMenuOrta ul>li:hover ul {
+    display: flex;
+}
+
+/*Üst Menü Bitiş */
+/*Ürün Kısmı Başlangıç */
+.tumSayfa {
+
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+
+}
+
+.tumSayfa .sol {
+    width: 50%;
+    border: 1px solid black;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    background-color: white;
+
+}
+
+.tumSayfa .sol h4 {
+    width: 100%;
+    font-size: 25px;
+
+
+}
+
+.tumSayfa .sol .fotoDiv {
+    width: 50%;
+
+    margin: 0px auto;
+}
+
+.tumSayfa .sol img {
+    width: 100%;
+
+}
+
+.tumSayfa .sag {
+    display: flex;
+    flex-direction: column;
+
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 50%;
+    border: 1px solid black;
+
+}
+
+
+
+.tumSayfa .sag>* {
+    margin-top: 20px;
+
+}
+
+.tumSayfa .sag .icerik {
+    display: flex;
+    flex-direction: column;
+
+
+
+    width: 50%;
+}
+
+
+.tumSayfa .sag .STK {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.tumSayfa .sag .STK label {
+    width: 100%;
+    padding: 10px;
+
+}
+
+.tumSayfa .sag .STK label select {
+    width: 30%;
+    padding: 10px;
+}
+
+.tumSayfa .sag .STK button {
+    width: 10%;
+    padding: 10px;
+    background-color: rgb(47, 132, 212);
+    color: white;
+    margin-right: 5px;
+
+}
+
+.tumSayfa .sag .STK .butonlar {
+    display: flex;
+
+}
+
+.tumSayfa .sag p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.tumSayfa .sag .STK .butonlar p {
+    margin-left: 10px;
+
+}
+
+#UrunAdet {
+    border: 1px solid black;
+    padding: 5px;
+    width: 5%;
+    margin: 10px 5px;
+    text-align: center;
+}
+
+#FiyatDeger {
+    margin: 0px 5px;
+}
+
+.YYler {
+    display: flex;
+
+}
+
+.YYler strong {
+    font-weight: 900;
+
+}
+
+.benzerler {
+    width: 70%;
+    text-align: center;
+    margin: 0px auto;
+
+
+}
+
+.benzerler>h1 {
+    color: white;
+
+
+}
+
+.altmenu {
+    margin: 0px auto;
+
+    width: 70%;
+    display: flex;
+}
+
+
+.UrunContainer {
+
+    margin: 0px auto;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+}
+
+.UrunContainer .urun {
+    width: 25%;
+    border: 1px solid black;
+    transition: transform 0.4s;
+    background-color: white;
+
+
+}
+
+.UrunContainer a {
+    color: black;
+
+}
+
+
+
+.UrunContainer .urun .UrunImg {
+    width: 70%;
+    display: flex;
+    margin: 0px auto;
+
+
+}
+
+.UrunContainer .urun .UrunImg img {
+    width: 100%;
+
+}
+
+.UrunContainer .urun .UrunImgOzel {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.UrunContainer .urun .UrunImgOzel img {
+    width: 90%;
+
+}
+
+.UrunContainer .urun:hover {
+    transform: scale(1.02);
+    position: relative;
+
+}
+
+.benzerler h1 {
+    color: white;
+}
+
+/*Ürün Kısmı Bitiş */
+/*Footer Başlangıç*/
+.footer {
+    width: 100%;
+    color: white;
+
+    margin-top: 40px;
+    background-color: black;
+    display: flex;
+}
+
+.footer .yazilar {
+    width: 70%;
+    margin: 20px auto;
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.footer .yazilar a {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+/*Footer Bitişç*/
+@media (max-width: 1024px) {
+
+    .UstMenu {
+        width: 90%;
+    }
+
+    .tumSayfa {
+        width: 95%;
+    }
+
+    .UrunContainer .urun {
+        width: 30%;
+    }
+
+    .benzerler {
+        width: 90%;
+    }
+
+
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    /* --- ÜST MENÜ --- */
+    .UstMenu {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .UstMenuOrta ul {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .UstMenuOrta ul>li {
+        width: 80%;
+    }
+
+
+
+    /* --- ÜRÜN DETAY SAYFASI (tumSayfa) --- */
+    .tumSayfa {
+        flex-direction: column;
+        width: 95%;
+        gap: 20px;
+    }
+
+    .tumSayfa .sol,
+    .tumSayfa .sag {
+        width: 100%;
+    }
+
+    .tumSayfa .sol .fotoDiv {
+        width: 70%;
+    }
+
+    .tumSayfa .sag .icerik {
+        width: 100%;
+    }
+
+
+
+    /* --- STOK SEÇİM ALANI --- */
+    .tumSayfa .sag .STK label select {
+        width: 50%;
+    }
+
+    .tumSayfa .sag .STK button {
+        width: 25%;
+    }
+
+    #UrunAdet {
+        width: 15%;
+    }
+
+
+
+    /* --- ÜRÜN LİSTELEME --- */
+    .UrunContainer {
+        justify-content: center;
+    }
+
+    .UrunContainer .urun {
+        width: 45%;
+        margin-bottom: 20px;
+    }
+
+    /* --- Footer --- */
+    .footer .yazilar {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+}

@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Rye&family=Space+Grotesk:wght@300..700&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Space Grotesk', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+#tumSayfa {
+    min-height: 100vh;
+    background-image: url("../fotolar/arkaplan3.jpg");
+    background-size: cover;
+    /* ekranı doldurur */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*Üst Menü Başlangıç */
+.UstMenu {
+
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: 0px auto;
+
+    justify-content: space-evenly
+}
+
+#UstMenuSag a {
+    color: black;
+}
+
+
+#UstMenuFoto img {
+    width: 200px;
+
+}
+
+.UstMenuOrta ul {
+    display: flex;
+    list-style: none;
+}
+
+.UstMenuOrta ul>li {
+    position: relative;
+    padding: 10px 20px;
+    border: 1px solid black;
+    cursor: pointer;
+    background: white;
+    min-width: 160px;
+
+    text-align: center;
+}
+
+.UstMenuOrta ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    flex-direction: column;
+    background: white;
+    border: 1px solid black;
+    z-index: 999;
+}
+
+.UstMenuOrta ul li ul li {
+    border-bottom: 1px solid black;
+    padding: 10px 0;
+}
+
+.UstMenuOrta ul li ul li a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+
+.UstMenuOrta ul>li:hover {
+    background: black;
+    color: white;
+}
+
+.UstMenuOrta ul li ul li:hover {
+    background: black;
+}
+
+.UstMenuOrta ul li ul li:hover a {
+    color: white;
+}
+
+
+.UstMenuOrta ul>li:hover ul {
+    display: flex;
+}
+
+/*Üst Menü Bitiş */
+/*hakkımızda Kısmı Başlangıç */
+.conH {
+    display: flex;
+    width: 90%;
+
+    margin: 10px auto;
+    flex-direction: column;
+
+}
+
+.conH>h1 {
+    text-align: center;
+    font-family: "Noto Sans";
+    font-weight: 900;
+    font-size: 50px;
+    background-image: url(../fotolar/gemiH4.jpg);
+    background-size: cover;
+    background-clip: text;
+    color: transparent;
+    animation: animate 20s linear infinite;
+
+
+}
+
+@keyframes animate {
+    to {
+        background-position-x: -2000px;
+    }
+}
+
+.conH .soldan {
+    width: 90%;
+    color: black;
+    display: flex;
+    border: 1px solid black;
+    border-radius: 8px;
+    margin: 0px auto;
+    background-color: white;
+    padding: 3px;
+
+}
+
+.conH .soldan .foto {
+    width: 40%;
+    margin: 2px 10px;
+
+
+}
+
+.conH .soldan .foto img {
+    width: 100%;
+    margin: auto 0px;
+    height: 400px;
+
+
+}
+
+.conH .soldan .icerik {
+    width: 70%;
+    color: black;
+    margin: auto 0px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.conH .soldan .icerik p {
+    width: 100%;
+    color: black;
+
+    font-size: 25px;
+
+}
+
+
+
+.conH .sagdan {
+    width: 90%;
+    color: black;
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px auto;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: white;
+    padding: 3px;
+
+}
+
+.conH .sagdan .foto {
+    width: 40%;
+    margin: 2px 10px;
+
+
+}
+
+.conH .sagdan .foto img {
+    width: 100%;
+    margin: auto 0px;
+    height: 400px;
+
+
+}
+
+.conH .sagdan .icerik {
+    width: 70%;
+    color: black;
+    margin: auto 0px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.conH .sagdan .icerik p {
+    width: 100%;
+    color: black;
+
+    font-size: 25px;
+
+}
+
+/*hakkımızda  Kısmı Bitiş */
+/*Footer Başlangıç*/
+.footer {
+    width: 100%;
+    color: white;
+
+    margin-top: 40px;
+    background-color: black;
+    display: flex;
+}
+
+.footer .yazilar {
+    width: 70%;
+    margin: 20px auto;
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.footer .yazilar a {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+/*Footer Bitişç*/
+
+@media (max-width: 992px) {
+
+    .UstMenu {
+        width: 95%;
+    }
+
+    .UstMenuOrta ul>li {
+        min-width: 120px;
+        padding: 8px 10px;
+        font-size: 15px;
+    }
+
+    .conH .soldan,
+    .conH .sagdan {
+        width: 95%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .conH .soldan .foto,
+    .conH .sagdan .foto {
+        width: 100%;
+        margin: 0;
+    }
+
+    .conH .soldan .foto img,
+    .conH .sagdan .foto img {
+        height: auto;
+        max-height: 350px;
+        object-fit: cover;
+    }
+
+    .conH .soldan .icerik,
+    .conH .sagdan .icerik {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .conH .soldan .icerik p,
+    .conH .sagdan .icerik p {
+        font-size: 20px;
+    }
+
+}
+
+
+
+@media (max-width: 768px) {
+
+    #UstMenuFoto img {
+        width: 150px;
+    }
+
+    .UstMenu {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .UstMenuOrta ul {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .conH>h1 {
+        font-size: 24px;
+    }
+
+    .conH .soldan,
+    .conH .sagdan {
+        border-radius: 6px;
+    }
+
+    .conH .soldan .icerik p,
+    .conH .sagdan .icerik p {
+        font-size: 18px;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer .yazilar {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer .yazilar a {
+        font-size: 14px;
+        justify-content: center;
+    }
+}
