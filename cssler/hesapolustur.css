@@ -129,17 +129,9 @@
 
 .ana .kayit {
     display: flex;
-    width: 100%;
+
     text-align: center;
     padding: 10px;
-    margin: 0px auto;
-
-}
-
-.ana .kayit form {
-    margin: 0px auto;
-
-    width: 70%;
 
 }
 
@@ -155,10 +147,10 @@
 }
 
 .ana .kayit form>input {
-    margin: 0px auto;
     padding: 10px;
-    width: 100%;
-    border: 1px solid black;
+
+    width: 70%;
+    border: 1px solid rgb(0, 0, 0);
     border-radius: 8px;
     transition: transform 0.4s;
 }
@@ -188,7 +180,7 @@
 }
 
 .yeniK {
-    width: 40%;
+    width: 25%;
     margin: 0px 0px 0px auto;
 
     text-align: right;
