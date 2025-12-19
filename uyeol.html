@@ -80,27 +80,70 @@
         <div class="baslik">
             <h1>LİMAN MARKET</h1>
         </div>
-        <div class="kayit">
-            <form action="gonder">
-                <label>Kullanıcı Adı</label>
-                <br>
-                <input type="text" name="kullaniciAD" id="kullaniciAD" placeholder="Kullanıcı adınızı giriniz "
-                    required>
+        <div class="ikili">
+            <div class="uyeGiris" id="gonder">
+                <form action="gonder" id>
+                    <label>Kullanıcı Adı</label>
+                    <br>
+                    <input type="text" name="kullaniciAD" id="kullaniciAD" placeholder="Kullanıcı adınızı giriniz "
+                        required>
 
-                <br>
-                <label>Şifre</label>
-                <br>
-                <input type="password" name="sfr" id="sifre" placeholder="Şifrenizi giriniz " required>
-                <br>
-
-
-                <div class="yeniK">
-                    <p>Hesabınız yok mu? <a href="hesapolustur.html">Hemen oluşturun</a></p>
-                </div>
+                    <br>
+                    <label>Şifre</label>
+                    <br>
+                    <input type="password" name="sfr" id="sifre" placeholder="Şifrenizi giriniz " required>
+                    <br>
 
 
-                <input id="buton" type="submit" value="Kayıt Ol">
-            </form>
+
+
+                    <input id="buton" type="submit" value="GİRİŞ YAP">
+                </form>
+
+            </div>
+            <div class="kayit" id="getirilen">
+                <form action="gonder" id>
+                    <label>Kullanıcı Adı</label>
+                    <br>
+                    <input type="text" name="kullaniciAD" id="kullaniciAD" placeholder="Kullanıcı adınızı giriniz "
+                        required>
+
+                    <br>
+                    <label>Şifre</label>
+                    <br>
+                    <input type="password" name="sfr" id="sifre" placeholder="Şifrenizi giriniz " required>
+                    <br>
+                    <label>Telefon NO</label>
+                    <br>
+                    <input type="tel" name="telno" id="TELNO"
+                        placeholder="telefon numarası giriniz (ornek: 05555555555)" required>
+                    <br>
+                    <label>Email</label>
+                    <br>
+                    <input type="email" name="mail" id="kMail" placeholder="email giriniz (ornek: Huseyin123@gmail.com)"
+                        required>
+                    <br>
+                    <label id="checkLabeli"><input type="checkbox" name="sozlesme" id="sozlesme" required>Kayıt Olarak
+                        Liman
+                        Market
+                        <strong>Kullanım
+                            Koşullarını</strong> Ve <Strong>Gizlilik Bildirimini</Strong> kabul ediyorsunuz </label>
+
+                    <br>
+
+
+
+
+                    <input id="buton" type="submit" value="Kayıt Ol">
+                </form>
+            </div>
+
+        </div>
+        <div class="yeniK" onclick="getir()">
+            <p id="degisenYazi">
+                Hesabınız yok mu?
+                <strong style="color: rgb(44, 122, 224);">Hemen Oluşturun</strong>
+            </p>
         </div>
     </div>
     <div class="footer">
@@ -141,6 +184,7 @@
         </div>
 
     </div>
+    <script src="jsler/hesapolusturyazi.js"></script>
 </body>
 
 </html>
