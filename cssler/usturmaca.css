@@ -96,6 +96,92 @@
     display: flex;
 }
 
+.yanmenu {
+    position: absolute;
+
+    height: 100%;
+    left: -260px;
+    top: 70px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.yanmenu ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+
+
+
+}
+
+.yanmenu ul>li {
+    position: relative;
+    padding: 10px 20px;
+    border: 1px solid black;
+    cursor: pointer;
+    background: white;
+    min-width: 160px;
+
+    text-align: center;
+}
+
+.yanmenu ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    flex-direction: column;
+    background: white;
+    border: 1px solid black;
+    z-index: 999;
+}
+
+.yanmenu ul li ul li {
+    border-bottom: 1px solid black;
+    padding: 10px 0;
+}
+
+.yanmenu ul li ul li a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+
+.yanmenu ul>li:hover {
+    background: black;
+    color: white;
+}
+
+.yanmenu ul>li:hover {
+    background: black;
+    color: white;
+}
+
+.yanmenu ul li ul li:hover {
+    background: black;
+}
+
+.yanmenu ul li ul li:hover>a {
+    color: white !important;
+}
+
+
+.yanmenu ul>li:hover ul {
+    display: flex;
+
+}
+
+.burgiricon {
+    width: 90px;
+    cursor: pointer;
+    margin: 0px auto;
+    display: none;
+}
+
 /*Üst Menü Bitiş */
 /*Ürün Kısmı Başlangıç */
 .tumSayfa {
@@ -338,9 +424,105 @@
         width: 95%;
     }
 
-    /* Ürün kartları 4 yerine 3 sütun */
+
+
+
     .UrunContainer .urun {
         width: 30%;
     }
 
+}
+
+@media (max-width: 768px) {
+
+
+    .UstMenu {
+
+        gap: 15px;
+        width: 100%;
+    }
+
+    .UstMenuOrta ul {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .UstMenuOrta ul>li {
+        width: 80%;
+    }
+
+    .UstMenuOrta ul {
+        display: none;
+    }
+
+
+
+    .burgiricon {
+        display: block;
+    }
+
+    .burgir .yanmenu {
+
+        display: none;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+
+
+
+    .tumSayfa {
+        flex-direction: column;
+        width: 95%;
+        gap: 20px;
+    }
+
+    .tumSayfa .sol,
+    .tumSayfa .sag {
+        width: 100%;
+    }
+
+    .tumSayfa .sol .fotoDiv {
+        width: 70%;
+    }
+
+    .tumSayfa .sag .icerik {
+        width: 100%;
+    }
+
+
+
+
+    .tumSayfa .sag .STK label select {
+        width: 50%;
+    }
+
+    .tumSayfa .sag .STK button {
+        width: 25%;
+    }
+
+    #UrunAdet {
+        width: 15%;
+    }
+
+
+
+
+    .UrunContainer {
+        justify-content: center;
+    }
+
+    .UrunContainer .urun {
+        width: 45%;
+        margin-bottom: 20px;
+    }
+
+
+    .footer .yazilar {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
 }

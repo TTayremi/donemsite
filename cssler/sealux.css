@@ -96,6 +96,92 @@
     display: flex;
 }
 
+.yanmenu {
+    position: absolute;
+
+    height: 100%;
+    left: -260px;
+    top: 70px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.yanmenu ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+
+
+
+}
+
+.yanmenu ul>li {
+    position: relative;
+    padding: 10px 20px;
+    border: 1px solid black;
+    cursor: pointer;
+    background: white;
+    min-width: 160px;
+
+    text-align: center;
+}
+
+.yanmenu ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    flex-direction: column;
+    background: white;
+    border: 1px solid black;
+    z-index: 999;
+}
+
+.yanmenu ul li ul li {
+    border-bottom: 1px solid black;
+    padding: 10px 0;
+}
+
+.yanmenu ul li ul li a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+
+.yanmenu ul>li:hover {
+    background: black;
+    color: white;
+}
+
+.yanmenu ul>li:hover {
+    background: black;
+    color: white;
+}
+
+.yanmenu ul li ul li:hover {
+    background: black;
+}
+
+.yanmenu ul li ul li:hover>a {
+    color: white !important;
+}
+
+
+.yanmenu ul>li:hover ul {
+    display: flex;
+
+}
+
+.burgiricon {
+    width: 90px;
+    cursor: pointer;
+    margin: 0px auto;
+    display: none;
+}
+
 /*Üst Menü Bitiş */
 /*Ürün Kısmı Başlangıç */
 .tumSayfa {
@@ -364,9 +450,9 @@
 
 @media (max-width: 768px) {
 
-    /* --- ÜST MENÜ --- */
+
     .UstMenu {
-        flex-direction: column;
+
         gap: 15px;
         width: 100%;
     }
@@ -381,9 +467,27 @@
         width: 80%;
     }
 
+    .UstMenuOrta ul {
+        display: none;
+    }
 
 
-    /* --- ÜRÜN DETAY SAYFASI (tumSayfa) --- */
+
+    .burgiricon {
+        display: block;
+    }
+
+    .burgir .yanmenu {
+
+        display: none;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+
+
+
     .tumSayfa {
         flex-direction: column;
         width: 95%;
@@ -405,7 +509,7 @@
 
 
 
-    /* --- STOK SEÇİM ALANI --- */
+
     .tumSayfa .sag .STK label select {
         width: 50%;
     }
@@ -420,7 +524,7 @@
 
 
 
-    /* --- ÜRÜN LİSTELEME --- */
+
     .UrunContainer {
         justify-content: center;
     }
@@ -430,7 +534,7 @@
         margin-bottom: 20px;
     }
 
-    /* --- Footer --- */
+
     .footer .yazilar {
         flex-direction: column;
         text-align: center;

@@ -5,10 +5,10 @@ function getir() {
     let gonderdiv = document.getElementById("gonder");
     let yazi = document.getElementById("degisenYazi");
 
-    let sure = 400; // CSS transition süresi
+    let sure = 400;
 
     if (sayac % 2 === 0) {
-        // 👉 gonderdiv GİDİYOR
+
         gonderdiv.classList.add("anim");
         gonderdiv.style.opacity = "0";
         gonderdiv.style.transform = "translateX(-50px)";
@@ -16,7 +16,7 @@ function getir() {
         setTimeout(() => {
             gonderdiv.style.display = "none";
 
-            // 👉 getirdiv GELİYOR
+
             getirdiv.style.display = "flex";
             getirdiv.style.position = "relative"
             getirdiv.style.width = "100%"
@@ -35,7 +35,7 @@ function getir() {
         yazi.innerHTML = 'Hesabınız var mı? <strong>Giriş yapın</strong>';
 
     } else {
-        // 👉 getirdiv GİDİYOR
+
         getirdiv.classList.add("anim");
         getirdiv.style.opacity = "0";
         getirdiv.style.transform = "translateX(50px)";
@@ -43,7 +43,7 @@ function getir() {
         setTimeout(() => {
             getirdiv.style.display = "none";
 
-            // 👉 gonderdiv GELİYOR
+
             gonderdiv.style.display = "flex";
             gonderdiv.style.opacity = "0";
             gonderdiv.style.transform = "translateX(-50px)";
@@ -61,4 +61,14 @@ function getir() {
     }
 
     sayac++;
+}
+
+function burgirgetir() {
+    let yanmenu = document.getElementsByClassName("yanmenu")[0];
+    if (yanmenu.style.left === "0px") {
+        yanmenu.style.left = "-260px";
+    } else {
+        yanmenu.style.left = "0px";
+    }
+
 }
